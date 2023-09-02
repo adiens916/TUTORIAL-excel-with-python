@@ -13,7 +13,7 @@ print()
 # print()
 
 # 이미 있는 엑셀 파일 열기
-directory = r"C:\Users\adiens\Downloads\Project\TUTORIAL-win32com"
+directory = r"C:\Users\adiens\Downloads\Project\TUTORIAL-win32com\win32com"
 excel_file_name = r"\1_cell.xlsx"
 workbook = excel.Workbooks.Open(directory + excel_file_name)
 worksheet = workbook.Worksheets("Sheet1")
