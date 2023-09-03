@@ -15,7 +15,7 @@ def write_cell():
     worksheet.cell(1, 1).value = "test 1"  # A1 입력
     worksheet["C1"].value = "test 2"  # C1 입력
 
-    workbook.save(f"{path}/saved.xlsx")  # 저장
+    workbook.save(f"{path}/target.xlsx")  # 저장
 
 
 main()
