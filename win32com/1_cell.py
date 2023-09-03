@@ -13,7 +13,7 @@ print()
 # print()
 
 # 이미 있는 엑셀 파일 열기
-directory = r"C:\Users\adiens\Downloads\Project\TUTORIAL-win32com\win32com"
+directory = r"C:\Users\adiens\Downloads\Project\TUTORIAL-excel-with-python\win32com"
 excel_file_name = r"\1_cell.xlsx"
 workbook = excel.Workbooks.Open(directory + excel_file_name)
 worksheet = workbook.Worksheets("Sheet1")
@@ -34,4 +34,9 @@ worksheet.Range("A1:A10").Copy()
 worksheet.Range("B1").Select()
 worksheet.Paste()
 print()
-# workbook.Save()
+
+# 저장하기
+workbook.Save()
+
+# 닫기
+excel.Quit()
