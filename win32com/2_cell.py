@@ -1,4 +1,5 @@
 import win32com.client
+from settings import directory
 
 # 엑셀 프로그램 실행
 excel = win32com.client.Dispatch("Excel.Application")
@@ -13,9 +14,7 @@ print()
 # print()
 
 # 이미 있는 엑셀 파일 열기
-directory = r"C:\Users\adiens\Downloads\Project\TUTORIAL-excel-with-python\win32com"
-excel_file_name = r"\2_cell.xlsx"
-workbook = excel.Workbooks.Open(directory + excel_file_name)
+workbook = excel.Workbooks.Open(f"{directory}/2_cell.xlsx")
 worksheet = workbook.Worksheets("Sheet1")
 print()
 
