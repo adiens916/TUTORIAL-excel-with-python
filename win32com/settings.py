@@ -1,1 +1,4 @@
-directory = "C:/Users/adiens/Downloads/Project/TUTORIAL-excel-with-python/win32com"
+import os
+
+root = os.getcwd()
+directory = root + "/win32com"
