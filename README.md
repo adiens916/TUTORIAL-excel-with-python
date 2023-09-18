@@ -1,6 +1,27 @@
 # TUTORIAL-excel-with-python
 
-[VBA 엑셀 상수를 쓰는 방법]
+### 실습 교재
+https://wikidocs.net/135788
+
+### Tip. 엑셀 상수를 사용하면 편함
+엑셀에서는 Ctrl + 방향키 조합을 통해 
+다음 내용이 있는 셀까지 점프(?)하는 기능이 있다.
+
+이 역시 매크로로도 가능한데, 아래와 같이
+아래 방향(xlDown)이나 우측 방향(xlToRight) 등의
+엑셀 상수를 통해 가능하다.
+
+```python
+worksheet.Range("A1").End(constants.xlDown).Select()  # A1 기준으로 아래쪽에 있는 셀 선택
+
+worksheet.Range("A9").End(constants.xlToRight).Select()  # A9 기준으로 우측에 있는 셀 선택
+```
+
+물론 이는 상수일 뿐이므로, xlDown 대신에 -4121이나, xlToRight 대신에 -4161을 넣어도 되긴 한다... [(참고)](https://learn.microsoft.com/en-us/office/vba/api/excel.xldirection)
+
+그러나 숫자는 알아보기도 어렵고, 그렇다고 상수를 따로 지정할 바엔 그냥 기존에 정리된 걸 쓰는 게 훨씬 편하다.
+
+### Tip. 엑셀 상수를 사용하기 위한 세팅
 
 [출처](https://stackoverflow.com/questions/21465810/accessing-enumeration-constants-in-excel-com-using-python-and-win32com#answer-21534997)
 
