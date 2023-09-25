@@ -1,5 +1,5 @@
 from settings import get_active_sheet_of_excel
-from win32com.client import constants
+
 
 ### 1. 셀 한 개 찾기
 worksheet = get_active_sheet_of_excel("5_find")  # 엑셀 실행
@@ -29,7 +29,20 @@ if found_cell is not None:
             break
 
 
-### 3. 찾은 셀 근처 값 가져오기
+### 2.1. 함수화
+def find_cells(keyword: str) -> list:
+    found_cells = []
 
+    found_cell = worksheet.UsedRange.Find(keyword)
+    if found_cell is not None:
+        first_cell_address = found_cell.Address
 
-### 4. 찾은 셀들 중 특정 셀들만 처리
+        while True:
+            found_cells.append(found_cell)
+            found_cell = worksheet.UsedRange.FindNext(found_cell)
+
+            # 만족하는 게 없거나 / 전부 다 찾아서 처음으로 돌아온 경우, 종료
+            if (found_cell is None) or (found_cell.Address == first_cell_address):
+                break
+
+    return found_cells
