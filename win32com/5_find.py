@@ -18,7 +18,10 @@ if found_cell is not None:
     first_cell_address = found_cell.Address
 
     while True:
-        found_cell = worksheet.UsedRange.FindNext(found_cell)  # 다음 셀 찾기
+        # 다음 셀 찾기
+        # 이때 FindNext 안에 찾을 기준이 되는 셀 (이전 셀)을 넣어야 함
+        # 안 넣으면 하나만 찾고 끝남 (기준이 없으니 매번 좌측 셀 기준으로만 찾기 때문)
+        found_cell = worksheet.UsedRange.FindNext(found_cell)
         print(f"신곡중 위치: {found_cell.Address}")
 
         # 만족하는 게 없거나 / 전부 다 찾아서 처음으로 돌아온 경우, 종료

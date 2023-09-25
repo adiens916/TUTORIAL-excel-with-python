@@ -17,7 +17,13 @@
 
 ## Property
 ### Range 반환하는 속성
+- [Offset](https://learn.microsoft.com/en-us/office/vba/api/excel.range.offset) => 오프셋
 - [Item](https://learn.microsoft.com/en-us/office/vba/api/excel.range.item) => 오프셋
+    - Offset과 Item의 차이 [참고](https://blog.naver.com/rosa0189/60145630004):
+        - Offset은 (0, 0)이 기준 위치고, Item은 (1, 1)이 기준 위치임.
+        - Item은 VBA에서 축약 표현을 쓸 수 있음.
+    - 개인적으로는 Offset이 명시적이고 덜 헷갈려서 좋은 것 같음.
+        
 - [Next](https://learn.microsoft.com/en-us/office/vba/api/excel.range.next) => 다음 셀
 - [Previous](https://learn.microsoft.com/en-us/office/vba/api/excel.range.previous) => 이전 셀
 
