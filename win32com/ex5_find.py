@@ -2,7 +2,7 @@ from settings import get_active_sheet_of_excel
 
 
 ### 1. 셀 한 개 찾기
-worksheet = get_active_sheet_of_excel("5_find")  # 엑셀 실행
+worksheet = get_active_sheet_of_excel("ex5_find")  # 엑셀 실행
 
 target_cell = worksheet.UsedRange.Find("화곡초")  # '화곡초' 검색
 target_cell.Select()  # 선택

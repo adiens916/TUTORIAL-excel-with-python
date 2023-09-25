@@ -14,7 +14,7 @@ print()
 # print()
 
 # 이미 있는 엑셀 파일 열기
-workbook = excel.Workbooks.Open(f"{directory}/2_cell.xlsx")
+workbook = excel.Workbooks.Open(f"{directory}/ex2_cell.xlsx")
 worksheet = workbook.Worksheets("Sheet1")
 print()
 
