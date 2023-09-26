@@ -30,7 +30,7 @@ if found_cell is not None:
 
 
 ### 2.1. 함수화
-def find_cells(keyword: str) -> list:
+def find_cells(worksheet, keyword: str) -> list:
     found_cells = []
 
     found_cell = worksheet.UsedRange.Find(keyword)
