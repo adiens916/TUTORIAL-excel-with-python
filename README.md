@@ -3,6 +3,23 @@
 ### 실습 교재
 https://wikidocs.net/135788
 
+### Tip. 엑셀 날짜 비교
+엑셀에서 날짜 비교를 할 때는 timezone 정보를 넣어줘야 한다.
+
+파이썬에서 datetime은 기본적으로 `naive`하다는데, timezone 정보를 넣어주면 `aware`(?)하게 바뀐다고 한다.
+
+[참고](https://stackoverflow.com/questions/15307623/cant-compare-naive-and-aware-datetime-now-challenge-datetime-end#answer-15307743)
+
+```python
+from datetime import datetime
+from pytz import UTC
+
+criteria_date = datetime(2023, 8, 31, tzinfo=UTC)
+receipt_date_cell.Value >= criteria_date
+```
+[코드 원본](./win32com/ex6_find_and_do.py)
+
+
 ### Tip. 엑셀 상수를 사용하면 편함
 엑셀에서는 Ctrl + 방향키 조합을 통해 
 다음 내용이 있는 셀까지 점프(?)하는 기능이 있다.
