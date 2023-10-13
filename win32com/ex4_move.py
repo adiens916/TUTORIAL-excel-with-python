@@ -1,5 +1,5 @@
-from settings import get_active_sheet_of_excel
 from win32com.client import constants
+from starter import get_active_sheet_of_excel
 
 worksheet = get_active_sheet_of_excel("ex4_move")  # 엑셀 실행
 

@@ -1,5 +1,5 @@
 import win32com.client
-from settings import directory
+from starter import directory
 
 # 엑셀 프로그램 실행
 excel = win32com.client.Dispatch("Excel.Application")

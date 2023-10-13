@@ -1,4 +1,4 @@
-from settings import get_excel, get_sheet
+from starter import get_excel, get_sheet
 
 
 # 엑셀 실행

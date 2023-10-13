@@ -1,7 +1,8 @@
 import pytz
 from datetime import datetime
 from win32com.client import constants
-from settings import get_active_sheet_of_excel
+
+from starter import get_active_sheet_of_excel
 from ex5_find import find_cells
 
 

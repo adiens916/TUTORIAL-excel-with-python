@@ -1,5 +1,5 @@
 import win32com.client
-from settings import directory
+from starter import directory
 
 excel = win32com.client.Dispatch("Excel.Application")  # 엑셀 앱 실행
 excel.Visible = True  # 실행 과정 보이게

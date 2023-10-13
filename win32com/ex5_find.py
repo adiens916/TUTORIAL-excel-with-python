@@ -1,4 +1,4 @@
-from settings import get_active_sheet_of_excel
+from starter import get_active_sheet_of_excel
 
 
 ### 1. 셀 한 개 찾기
